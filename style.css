@@ -24,6 +24,10 @@ body {
   color: #1b2631;
   font-size: 1.15rem;
 }
+.btn:hover{
+    cursor: pointer;
+    opacity: 0.75;
+}
 .btn__absolute {
   position: absolute;
   bottom: 0.75em;

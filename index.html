@@ -10,14 +10,26 @@
   <body>
     <section class="page-one">
       <h1 class="text-large">Page 1</h1>
-      <button class="btn btn__absolute">Next Page</button>
+      <button class="btn btn__absolute btn-1">Next Page</button>
     </section>
     <section class="page-two hidden__page">
       <h1 class="text-large">Page 2</h1>
-      <button class="btn">Prev Page</button>
+      <button class="btn btn__absolute btn-2">Prev Page</button>
     </section>
     <script>
-      console.log("Hello world");
+      const pageOne = document.querySelector(".page-one");
+      const pageTwo = document.querySelector(".page-two");
+      const btnOne = document.querySelector(".btn-1");
+      const btnTwo = document.querySelector(".btn-2");
+
+      btnOne.addEventListener("click", () => {
+        pageOne.classList.add("hidden__page");
+        pageTwo.classList.remove("hidden__page");
+      });
+      btnTwo.addEventListener("click", () => {
+        pageOne.classList.remove("hidden__page");
+        pageTwo.classList.add("hidden__page");
+      });
     </script>
   </body>
 </html>
